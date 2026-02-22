@@ -73,9 +73,9 @@
                 </div>
                 <div class="flex justify-center md:justify-end">
                     <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full border-4 border-blue-500 bg-gray-900 flex items-center justify-center shadow-xl overflow-hidden">
-                        <span class="text-3xl sm:text-4xl font-bold text-gray-300 tracking-widest">
-                            DF
-                        </span>
+                        <img src="{{ url_for('static', filename='profile.png') }}"
+                             alt="Foto de {{ data.name }}"
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
