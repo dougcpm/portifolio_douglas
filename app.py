@@ -32,28 +32,28 @@ Atualmente, concentro meus esforços em arquitetura de software e definição de
                 "title": "Plataforma de Gestão de Eventos",
                 "problem": "Organizações com processos manuais para inscrição, controle de participantes e emissão de certificados, gerando retrabalho e baixa visibilidade sobre a jornada do participante.",
                 "description": "Sistema web para gestão completa de eventos presenciais e online, com módulos de inscrição, controle de lotes, check-in, emissão de certificados e comunicação com participantes em tempo real.",
-                "tech_stack": ["PHP 8", "Laravel", "MySQL", "Redis"],
+                "tech_stack": ["Python", "Django REST Framework", "PostgreSQL", "Redis"],
                 "role": "Engenheiro de Software Full-Stack",
-                "demo_url": "",
-                "demo_credentials": ""
+                "demo_url": "https://demo.eventos.example.com",
+                "demo_credentials": "Usuário: demo@empresa.com | Senha: eventos123"
             },
             {
                 "title": "Sistema de Gestão de Frotas",
                 "problem": "Empresas com veículos e equipes em campo sem controle centralizado de rotas, manutenções e utilização, resultando em custos elevados e baixa previsibilidade operacional.",
                 "description": "Aplicação voltada ao monitoramento de frotas, cadastro de veículos, controle de manutenções, acompanhamento de deslocamentos e indicadores operacionais para suporte à tomada de decisão.",
-                "tech_stack": ["Node.js", "NestJS", "PostgreSQL", "Docker"],
+                "tech_stack": ["Python", "Django REST Framework", "PostgreSQL", "Redis"],
                 "role": "Engenheiro de Software Full-Stack",
-                "demo_url": "",
-                "demo_credentials": ""
+                "demo_url": "https://demo.frotas.example.com",
+                "demo_credentials": "Usuário: demo@empresa.com | Senha: frota123"
             },
             {
                 "title": "Plataforma de Identificação do Cidadão",
                 "problem": "Órgãos públicos e instituições com dados de cidadãos fragmentados em múltiplos sistemas, dificultando validação cadastral, consulta de informações e acesso a serviços.",
                 "description": "Plataforma centralizada para gestão e consulta de dados de cidadãos, com camadas de autenticação, trilhas de auditoria e integrações com sistemas legados para unificação das informações.",
                 "tech_stack": ["Python", "Django REST Framework", "PostgreSQL", "Redis"],
-                "role": "Arquiteto de Software",
-                "demo_url": "",
-                "demo_credentials": ""
+                "role": "Engenheiro de Software Full-Stack",
+                "demo_url": "https://demo.idcidadao.example.com",
+                "demo_credentials": "Usuário: demo@org.gov | Senha: cidadao123"
             }
         ],
         "contact": {
