@@ -12,7 +12,7 @@ def get_portfolio_content(lang):
             "role": "Full-Stack Software Engineer",
             "headline": "Robust Software Architecture for Scalable Businesses.",
             "subheadline": "Software engineering focused on architecture, performance and sustainable business growth.",
-            "about": """Software Engineer with over 10 years of experience leading and developing results-oriented technology solutions. My work is driven by generating real business value, aligning technical decisions with the organization's strategic goals.
+            "about": """Software Engineer with over 15 years of experience leading and developing results-oriented technology solutions. My work is driven by generating real business value, aligning technical decisions with the organization's strategic goals.
 
 Throughout my career, I have built strong experience as a Full-Stack Engineer, with end-to-end ownership of the development lifecycle — from architectural definition to delivery and production support. I design and build scalable, secure and high-performance systems using technologies such as PHP, Python and Node.js, always focused on operational efficiency and sustainable growth.
 
@@ -77,7 +77,7 @@ I currently focus on software architecture and technical standards definition, c
         "role": "Engenheiro de Software Full-Stack",
         "headline": "Arquitetura de Software Robusta para Negócios Escaláveis.",
         "subheadline": "Engenharia de software orientada à arquitetura, performance e crescimento sustentável do negócio.",
-        "about": """Engenheiro de Software com mais de 10 anos de experiência liderando e desenvolvendo soluções tecnológicas orientadas a resultados. Minha atuação é guiada pela geração de valor para o negócio, alinhando decisões técnicas às metas estratégicas da organização.
+        "about": """Engenheiro de Software com mais de 15 anos de experiência liderando e desenvolvendo soluções tecnológicas orientadas a resultados. Minha atuação é guiada pela geração de valor para o negócio, alinhando decisões técnicas às metas estratégicas da organização.
 
 Ao longo da carreira, consolidei forte experiência como Full-Stack, com domínio completo do ciclo de desenvolvimento — da definição arquitetural à entrega e sustentação em produção. Atuo na construção de sistemas escaláveis, seguros e de alta performance, utilizando tecnologias como PHP, Python e Node.js, sempre com foco em eficiência operacional e crescimento sustentável.
 
