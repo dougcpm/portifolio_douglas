@@ -29,22 +29,31 @@ Atualmente, concentro meus esforços em arquitetura de software e definição de
         },
         "projects": [
             {
-                "title": "Sistema de Gestão ERP Corporativo (SaaS)",
-                "description": "Migração de sistema legado monolítico para arquitetura de microsserviços, reduzindo custos de manutenção e tempo de resposta.",
-                "tech_stack": ["Python", "PostgreSQL", "Docker", "React"],
-                "role": "Arquiteto de Software Líder"
+                "title": "Plataforma de Gestão de Eventos",
+                "problem": "Organizações com processos manuais para inscrição, controle de participantes e emissão de certificados, gerando retrabalho e baixa visibilidade sobre a jornada do participante.",
+                "description": "Sistema web para gestão completa de eventos presenciais e online, com módulos de inscrição, controle de lotes, check-in, emissão de certificados e comunicação com participantes em tempo real.",
+                "tech_stack": ["PHP 8", "Laravel", "MySQL", "Redis"],
+                "role": "Engenheiro de Software Full-Stack",
+                "demo_url": "",
+                "demo_credentials": ""
             },
             {
-                "title": "API de Pagamentos High-Traffic",
-                "description": "API RESTful capaz de processar milhares de transações simultâneas com segurança bancária e zero downtime.",
-                "tech_stack": ["Node.js", "Redis", "MongoDB", "AWS Lambda"],
-                "role": "Desenvolvedor Backend Senior"
+                "title": "Sistema de Gestão de Frotas",
+                "problem": "Empresas com veículos e equipes em campo sem controle centralizado de rotas, manutenções e utilização, resultando em custos elevados e baixa previsibilidade operacional.",
+                "description": "Aplicação voltada ao monitoramento de frotas, cadastro de veículos, controle de manutenções, acompanhamento de deslocamentos e indicadores operacionais para suporte à tomada de decisão.",
+                "tech_stack": ["Node.js", "NestJS", "PostgreSQL", "Docker"],
+                "role": "Engenheiro de Software Full-Stack",
+                "demo_url": "",
+                "demo_credentials": ""
             },
             {
-                "title": "Portal de Análise de Dados Financeiros",
-                "description": "Dashboard interativo com processamento de dados em background para tomada de decisão executiva.",
-                "tech_stack": ["PHP 8 (Laravel)", "Vue.js", "MySQL"],
-                "role": "Full-Stack Developer"
+                "title": "Plataforma de Identificação do Cidadão",
+                "problem": "Órgãos públicos e instituições com dados de cidadãos fragmentados em múltiplos sistemas, dificultando validação cadastral, consulta de informações e acesso a serviços.",
+                "description": "Plataforma centralizada para gestão e consulta de dados de cidadãos, com camadas de autenticação, trilhas de auditoria e integrações com sistemas legados para unificação das informações.",
+                "tech_stack": ["Python", "Django REST Framework", "PostgreSQL", "Redis"],
+                "role": "Arquiteto de Software",
+                "demo_url": "",
+                "demo_credentials": ""
             }
         ],
         "contact": {

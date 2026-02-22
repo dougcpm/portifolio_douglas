@@ -139,6 +139,11 @@
                     <div class="p-8 flex-grow">
                         <div class="uppercase tracking-wide text-sm text-blue-600 font-bold mb-2">{{ project.role }}</div>
                         <h3 class="block mt-1 text-xl leading-tight font-bold text-navy mb-4">{{ project.title }}</h3>
+                        {% if project.problem %}
+                        <p class="text-gray-700 text-sm font-semibold mb-1">Problema</p>
+                        <p class="text-gray-600 mb-4">{{ project.problem }}</p>
+                        {% endif %}
+                        <p class="text-gray-700 text-sm font-semibold mb-1">Solução</p>
                         <p class="text-gray-600 mb-6">{{ project.description }}</p>
                         
                         <div class="mt-4">
@@ -152,11 +157,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-100 px-8 py-4 border-t border-gray-200">
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center">
-                            Ver Detalhes <span class="ml-1">&rarr;</span>
+                    {% if project.demo_url %}
+                    <div class="bg-gray-100 px-8 py-4 border-t border-gray-200 space-y-2">
+                        <a href="{{ project.demo_url }}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center">
+                            Acessar Ambiente de Demonstração <span class="ml-1">&rarr;</span>
                         </a>
+                        {% if project.demo_credentials %}
+                        <p class="text-xs text-gray-600">
+                            Credenciais de acesso: {{ project.demo_credentials }}
+                        </p>
+                        {% endif %}
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
