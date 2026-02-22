@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -56,4 +57,5 @@ Atualmente, concentro meus esforços em arquitetura de software e definição de
     return render_template('index.html', data=portfolio_data, current_year=current_year)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.getenv("PORT", 5000))
+    app.run(debug=True, port=port)
