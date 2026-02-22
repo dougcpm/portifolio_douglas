@@ -131,7 +131,7 @@ Atualmente, concentro meus esforços em arquitetura de software e definição de
             },
         ],
         "contact": {
-            "email": "douglas@example.com",
+            "email": "douglastech.pro@gmail.com",
             "linkedin": "https://www.linkedin.com/in/douglas-ferreira-879a115a",
             "github": "https://github.com/dougcpm",
         },
