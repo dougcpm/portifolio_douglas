@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -8,12 +9,12 @@ def home():
         "name": "Douglas Ferreira",
         "role": "Engenheiro de Software Full-Stack",
         "headline": "Arquitetura de Software Robusta para Negócios Escaláveis.",
-        "subheadline": "10 anos de experiência transformando requisitos complexos em soluções digitais de alta performance com Python, PHP e Node.js.",
-        "about": """Com uma década de atuação no mercado de tecnologia, construí minha carreira fundamentada na entrega de valor real através da engenharia de software. Não escrevo apenas código; projeto ecossistemas digitais.
-        
-        Minha trajetória como Engenheiro Full-Stack me permitiu dominar todo o ciclo de vida do desenvolvimento, desde a concepção da arquitetura até o deploy em produção. Especialista em ambientes complexos, combino a robustez do PHP e Python com a versatilidade do Node.js para criar sistemas que são, acima de tudo, seguros, performáticos e sustentáveis a longo prazo.
-        
-        Atualmente, meu foco está em arquitetura de software, garantindo que as decisões técnicas de hoje sustentem o crescimento do negócio amanhã.""",
+        "subheadline": "Engenharia de software orientada à arquitetura, performance e crescimento sustentável do negócio.",
+        "about": """Engenheiro de Software com mais de 10 anos de experiência liderando e desenvolvendo soluções tecnológicas orientadas a resultados. Minha atuação é guiada pela geração de valor para o negócio, alinhando decisões técnicas às metas estratégicas da organização.
+
+Ao longo da carreira, consolidei forte experiência como Full-Stack, com domínio completo do ciclo de desenvolvimento — da definição arquitetural à entrega e sustentação em produção. Atuo na construção de sistemas escaláveis, seguros e de alta performance, utilizando tecnologias como PHP, Python e Node.js, sempre com foco em eficiência operacional e crescimento sustentável.
+
+Atualmente, concentro meus esforços em arquitetura de software e definição de padrões técnicos, contribuindo para ambientes mais robustos, previsíveis e preparados para escalar. Busco continuamente equilibrar excelência técnica, visão de produto e impacto mensurável nos resultados do negócio.""",
         "skills": {
             "hard": [
                 "Python (Django/Flask)", "PHP (Laravel/Symfony)", "Node.js (NestJS/Express)",
@@ -47,11 +48,12 @@ def home():
         ],
         "contact": {
             "email": "douglas@example.com",
-            "linkedin": "linkedin.com/in/douglasferreira",
-            "github": "github.com/douglasferreira"
+            "linkedin": "www.linkedin.com/in/douglas-ferreira-879a115a",
+            "github": "github.com/dougcpm"
         }
     }
-    return render_template('index.html', data=portfolio_data)
+    current_year = datetime.now().year
+    return render_template('index.html', data=portfolio_data, current_year=current_year)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
