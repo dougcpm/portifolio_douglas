@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="{{ 'en' if lang == 'en' else 'pt-BR' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,10 +48,15 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#about" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
-                        <a href="#skills" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#projects" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Projetos</a>
-                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition">Contato</a>
+                        <a href="#about" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">{{ ui.nav_about }}</a>
+                        <a href="#skills" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">{{ ui.nav_skills }}</a>
+                        <a href="#projects" class="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">{{ ui.nav_projects }}</a>
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition">{{ ui.nav_contact }}</a>
+                        <div class="ml-6 flex items-center space-x-2 text-sm">
+                            <a href="{{ url_for('home', lang='pt') }}" class="font-semibold {% if lang == 'pt' %}underline{% else %}opacity-70{% endif %}">PT</a>
+                            <span class="text-gray-300">/</span>
+                            <a href="{{ url_for('home', lang='en') }}" class="font-semibold {% if lang == 'en' %}underline{% else %}opacity-70{% endif %}">EN</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,10 +76,10 @@
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                         <a href="#projects" class="btn-primary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
-                            Ver Projetos Selecionados
+                            {{ ui.hero_primary_cta }}
                         </a>
                         <a href="#contact" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-navy transition">
-                            Entrar em Contato
+                            {{ ui.hero_secondary_cta }}
                         </a>
                     </div>
                 </div>
@@ -92,7 +97,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">Sobre Mim</h2>
+            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">{{ ui.section_about }}</h2>
             <div class="text-lg leading-relaxed text-gray-700 space-y-6 text-justify">
                 {% for paragraph in data.about.split('\n') %}
                     {% if paragraph.strip() %}
@@ -106,7 +111,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">Expertise Técnica</h2>
+            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">{{ ui.section_skills }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Hard Skills -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-blue-600">
@@ -139,7 +144,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">Projetos em Destaque</h2>
+            <h2 class="text-3xl font-bold text-center text-navy mb-12 uppercase tracking-wide">{{ ui.section_projects }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for project in data.projects %}
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 flex flex-col">
@@ -147,14 +152,14 @@
                         <div class="uppercase tracking-wide text-sm text-blue-600 font-bold mb-2">{{ project.role }}</div>
                         <h3 class="block mt-1 text-xl leading-tight font-bold text-navy mb-4">{{ project.title }}</h3>
                         {% if project.problem %}
-                        <p class="text-gray-700 text-sm font-semibold mb-1">Problema</p>
+                        <p class="text-gray-700 text-sm font-semibold mb-1">{{ ui.project_problem_label }}</p>
                         <p class="text-gray-600 mb-4">{{ project.problem }}</p>
                         {% endif %}
-                        <p class="text-gray-700 text-sm font-semibold mb-1">Solução</p>
+                        <p class="text-gray-700 text-sm font-semibold mb-1">{{ ui.project_solution_label }}</p>
                         <p class="text-gray-600 mb-6">{{ project.description }}</p>
                         
                         <div class="mt-4">
-                            <h4 class="text-sm font-bold text-gray-500 uppercase mb-2">Tech Stack</h4>
+                            <h4 class="text-sm font-bold text-gray-500 uppercase mb-2">{{ ui.project_tech_stack_label }}</h4>
                             <div class="flex flex-wrap gap-2">
                                 {% for tech in project.tech_stack %}
                                 <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-gray-600 bg-gray-200 last:mr-0 mr-1">
@@ -167,11 +172,11 @@
                     {% if project.demo_url %}
                     <div class="bg-gray-100 px-8 py-4 border-t border-gray-200 space-y-2">
                         <a href="{{ project.demo_url }}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center">
-                            Acessar Ambiente de Demonstração <span class="ml-1">&rarr;</span>
+                            {{ ui.project_demo_link }} <span class="ml-1">&rarr;</span>
                         </a>
                         {% if project.demo_credentials %}
                         <p class="text-xs text-gray-600">
-                            Credenciais de acesso: {{ project.demo_credentials }}
+                            {{ ui.project_demo_credentials }} {{ project.demo_credentials }}
                         </p>
                         {% endif %}
                     </div>
@@ -185,9 +190,9 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-navy text-white py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-8">Vamos construir soluções que realmente geram resultado?</h2>
+            <h2 class="text-3xl font-bold mb-8">{{ ui.section_contact_title }}</h2>
             <p class="text-xl text-gray-300 mb-12">
-                Estou disponível para projetos estratégicos e desafios de alta complexidade que exijam visão arquitetural, excelência técnica e foco em crescimento sustentável.
+                {{ ui.section_contact_subtitle }}
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-6">
                 <a href="mailto:{{ data.contact.email }}" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition w-full md:w-auto justify-center">
