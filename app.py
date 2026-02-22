@@ -49,8 +49,8 @@ Atualmente, concentro meus esforços em arquitetura de software e definição de
         ],
         "contact": {
             "email": "douglas@example.com",
-            "linkedin": "www.linkedin.com/in/douglas-ferreira-879a115a",
-            "github": "github.com/dougcpm"
+            "linkedin": "https://www.linkedin.com/in/douglas-ferreira-879a115a",
+            "github": "https://github.com/dougcpm"
         }
     }
     current_year = datetime.now().year
